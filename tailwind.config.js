@@ -8,14 +8,16 @@ export default {
       "./node_modules/flowbite/**/*.js"
   ],
     daisyui: {
-        themes: [ "night"],
+        themes: [ ],
     },
   theme: {
 
     extend: {},
   },
     plugins: [
-        require('flowbite/plugin'),
+        require('flowbite/plugin')({
+            charts: true,
+        }),
         require("daisyui")
     ],
 }

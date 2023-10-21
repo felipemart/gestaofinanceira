@@ -2,17 +2,17 @@
 
 namespace Tests\Feature\Livewire;
 
-use App\Livewire\Hello;
+use App\Livewire\Home;
 use Illuminate\Foundation\Testing\{RefreshDatabase, WithFaker};
 use Livewire\Livewire;
 use Tests\TestCase;
 
-class HelloTest extends TestCase
+class HomeTest extends TestCase
 {
     /** @test */
     public function renders_successfully()
     {
-        Livewire::test(Hello::class)
+        Livewire::test(Home::class)
             ->assertStatus(200);
     }
 }
