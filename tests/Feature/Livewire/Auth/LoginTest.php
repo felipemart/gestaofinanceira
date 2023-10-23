@@ -34,3 +34,23 @@ it('should make sure to inform the user an error when email and password doesnt 
         ->assertHasErrors(['invalidCredentials'])
         ->assertSee(trans('auth.failed'));
 });
+
+it('should make sure that the rate limit is blocking after 5 attempts', function () {
+
+    $user = User::factory()->create(['email' => 'joe@example.com', 'password' => '123456']);
+
+    for($i = 0; $i < 5; $i++) {
+        Livewire::test(Login::class)
+            ->set('email', 'joe@example')
+            ->set('password', 'wrong-password')
+            ->call('tryLogin')
+            ->assertHasErrors(['invalidCredentials']);
+    }
+
+    Livewire::test(Login::class)
+        ->set('email', 'joe@example')
+        ->set('password', 'wrong-password')
+        ->call('tryLogin')
+        ->assertHasErrors(['rateLimiter']);
+
+});
