@@ -24,8 +24,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/home', Home::class)->name('home');
     Route::get('/logout', fn () => auth()->logout())->name('logout');
 
-
-//Route::get('/categoria', Category::class)->name('categoria');
+    //Route::get('/categoria', Category::class)->name('categoria');
     //    Route::get('/dashboard', DashboardController::class)->name('dashboard');
     //
     //    #region Questions routes

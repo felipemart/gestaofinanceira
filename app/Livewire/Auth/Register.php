@@ -5,6 +5,7 @@ namespace App\Livewire\Auth;
 use App\Models\User;
 use App\Notifications\WelcomeNotification;
 use App\Providers\RouteServiceProvider;
+use Illuminate\Contracts\View\View;
 use Livewire\Attributes\Rule;
 use Livewire\Component;
 
@@ -26,7 +27,7 @@ class Register extends Component
     #[Rule('required', message: 'Por favor digite uma senha')]
     public ?string $password = null;
 
-    public function render()
+    public function render(): View
     {
         return view('livewire.auth.register')
             ->layout('components.layouts.guest');
