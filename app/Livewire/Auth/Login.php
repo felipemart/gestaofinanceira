@@ -2,9 +2,8 @@
 
 namespace App\Livewire\Auth;
 
-use App\Models\User;
 use Illuminate\Http\{RedirectResponse, Request};
-use Illuminate\Support\Facades\{Auth, Hash};
+use Illuminate\Support\Facades\{Auth};
 use Livewire\Attributes\Rule;
 use Livewire\Component;
 
@@ -23,17 +22,15 @@ class Login extends Component
             ->layout('components.layouts.guest');
     }
 
-    public function submit()
+    public function tryLogin()
     {
-        $user = User::whereEmail($this->email)->first();
+        if(!Auth::attempt(['email' => $this->email, 'password' => $this->password])) {
+            $this->addError('invalidCredentials', trans('auth.failed'));
 
-        if (Hash::check($this->password, $user->password)) {
-            auth()->login($user);
-
-            return to_route('home');
+            return;
         }
 
-        return to_route('auth.login');
+        $this->redirect(route('home'));
 
     }
 
