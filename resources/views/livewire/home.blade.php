@@ -1,10 +1,30 @@
-<div class="py-12 mt-0 pt-0">
+<div class="px-4 pt-6">
 
-    <a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Saldo</h5>
-        <p class="font-normal text-red-400-700 dark:text-red-400">R$ -3000,00</p>
-    </a>
+    <div class="grid gap-4 xl:grid-cols-2 2xl:grid-cols-4">
+        <!-- Main widget -->
+        <div
+            class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm 2xl:col-span-1 dark:border-gray-700 sm:p-6 dark:bg-gray-800">
+            <a href="#"
+               class=" block  p-6 bg-white  rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800  dark:hover:bg-gray-700">
+                <h5 class="mb-2 text-center text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    Saldo
+                </h5>
+                <p class="font-normal  text-red-400-700 dark:text-red-400 text-center">R$ -3000,00</p>
+            </a>
+        </div>
+        <div
+            class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm 2xl:col-span-1 dark:border-gray-700 sm:p-6 dark:bg-gray-800">
 
+        </div>
+        <div
+            class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm 2xl:col-span-1 dark:border-gray-700 sm:p-6 dark:bg-gray-800">
+
+        </div>
+        <div
+            class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm 2xl:col-span-1 dark:border-gray-700 sm:p-6 dark:bg-gray-800">
+
+        </div>
+    </div>
 
     <div class="p-4  rounded-lg dark:border-gray-700 mt-7 dark:bg-gray-800">
 
@@ -105,16 +125,16 @@
                         Descrição
                     </th>
                     <th scope="col" class="px-6 py-3">
-                       Valor
+                        Valor
                     </th>
                     <th scope="col" class="px-6 py-3">
-                       Data
+                        Data
                     </th>
                     <th scope="col" class="px-6 py-3">
-                       Categoria
+                        Categoria
                     </th>
                     <th scope="col" class="px-6 py-3">
-                      Conta
+                        Conta
                     </th>
                     <th scope="col" class="px-6 py-3">
 
@@ -128,16 +148,19 @@
                         Apple MacBook Pro 17"
                     </th>
                     <td class="px-6 py-4">
-                        <span class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-red-900 dark:text-red-300">5000,00</span>
+                        <span
+                            class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-red-900 dark:text-red-300">5000,00</span>
                     </td>
                     <td class="px-6 py-4">
                         20/08/2023
                     </td>
                     <td class="px-6 py-4">
-                        <span class="bg-yellow-100 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-yellow-900 dark:text-yellow-300">Compra</span>
+                        <span
+                            class="bg-yellow-100 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-yellow-900 dark:text-yellow-300">Compra</span>
                     </td>
                     <td class="px-6 py-4">
-                        <span class="bg-yellow-100 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-yellow-900 dark:text-yellow-300">Itau</span>
+                        <span
+                            class="bg-yellow-100 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-yellow-900 dark:text-yellow-300">Itau</span>
                     </td>
                     <td class="px-6 py-4">
                         <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Editar</a>
@@ -149,16 +172,19 @@
                         Salario
                     </th>
                     <td class="px-6 py-4">
-                        <span class="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">2000,00</span>
+                        <span
+                            class="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">2000,00</span>
                     </td>
                     <td class="px-6 py-4">
                         01/08/2023
                     </td>
                     <td class="px-6 py-4">
-                        <span class="bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300">Entrada</span>
+                        <span
+                            class="bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300">Entrada</span>
                     </td>
                     <td class="px-6 py-4">
-                        <span class="bg-indigo-100 text-indigo-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-indigo-900 dark:text-indigo-300">NuBank</span>
+                        <span
+                            class="bg-indigo-100 text-indigo-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-indigo-900 dark:text-indigo-300">NuBank</span>
                     </td>
                     <td class="px-6 py-4">
                         <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Editar</a>
@@ -253,8 +279,6 @@
         </div>
 
 
-
-
     </div>
 
 
@@ -265,11 +289,11 @@
     // ApexCharts options and config
     window.addEventListener("load", function () {
         const options = {
-            colors: ["#1A56DB", "#FDBA8C"],
+            colors: ["#004C38FF", "#790111"],
             series: [
                 {
                     name: "Gasto",
-                    color: "#1A56DB",
+                    color: "#790111FF",
                     data: [
                         {x: "Jan", y: 231},
                         {x: "Fev", y: 122},
@@ -284,7 +308,7 @@
                 },
                 {
                     name: "Entrada",
-                    color: "#FDBA8C",
+                    color: "#004C38FF",
                     data: [
                         {x: "Jan", y: 331},
                         {x: "Fev", y: 422},
