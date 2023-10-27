@@ -15,13 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/register', Register::class)->name('auth.register');
+Route::get('/register', Register::class)->name('register');
 Route::get('/login', Login::class)->name('login');
 
 Route::middleware(['auth'])->group(function () {
-
     Route::get('/', Welcome::class)->name('dashboard');
     Route::get('/home', Home::class)->name('home');
     Route::get('/logout', fn () => auth()->logout())->name('logout');
-
 });

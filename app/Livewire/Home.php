@@ -9,6 +9,7 @@ class Home extends Component
 {
     public function render(): View
     {
-        return view('livewire.home');
+        return view('livewire.home')
+            ->title('Home');
     }
 }

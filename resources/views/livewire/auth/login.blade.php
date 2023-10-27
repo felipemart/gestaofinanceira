@@ -67,7 +67,7 @@
                         Sign in
                     </button>
                     <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-                        Não tem uma conta ainda? <a wire:navigate href="{{ route('auth.register') }}"
+                        Não tem uma conta ainda? <a wire:navigate href="{{ route('register') }}"
                                                     class="font-medium text-primary-600 hover:underline dark:text-primary-500">Inscrever-se</a>
                     </p>
                 </form>
