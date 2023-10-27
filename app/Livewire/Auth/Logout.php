@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Auth;
 
 use Illuminate\Contracts\View\View;
 use Livewire\Component;
@@ -9,9 +9,8 @@ class Logout extends Component
 {
     public function render(): View
     {
-        return view('livewire.logout');
+        return view('livewire.auth.logout');
     }
-
     public function logout(): void
     {
         auth()->logout();
