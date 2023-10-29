@@ -24,6 +24,7 @@ class Recovery extends Component
 
     public function startPasswordRecovery(): void
     {
+        $this->validate();
 
         $user = User::whereEmail($this->email)->first();
 

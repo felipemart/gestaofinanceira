@@ -11,6 +11,7 @@ use function Pest\Laravel\get;
 test('needs to have a route to password recovery', function () {
 
     get(route('password.recovery'))
+        ->assertSeeLivewire('auth.password.recovery')
         ->assertOk();
 });
 
@@ -26,3 +27,14 @@ it('should be able to request for a password recovery', function () {
 
     Notification::assertSentTo($user, PasswordRecoveryNotification::class);
 });
+
+test('making sure the email is real email', function ($value, $rule) {
+    Livewire::test(Recovery::class)
+        ->set('email', $value)
+        ->call('startPasswordRecovery')
+        ->assertDontSee(trans('passwords.sent'))
+        ->assertHasErrors(['email' => $rule]);
+})->with([
+    'required' => ['value' => '', 'rule' => 'required'],
+    'email'    => ['value' => 'not-an-email', 'rule' => 'email'],
+]);
